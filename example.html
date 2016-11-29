@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+<title>cssp.js Example</title>
+<meta charset="utf-8"/>
+<script src="cssp.js"></script>
+
+</head>
+<body>
+<button onclick="parse1()">parse css</button>
+<p>Put Css here:</p>
+<textarea id="css"></textarea>
+
+<script>
+  function parse1(){
+    var ct = document.querySelector('div#styelct');
+    if (!ct) {
+      ct = document.createElement('DIV');
+      ct.setAttribute('id', 'styelct');
+      document.body.appendChild(ct);
+	}
+	ct.innerHTML = parseCssAsString1(parseCss1(document.getElementById('css').value));
+  }
+    
+</script>
+
+</body>
+</html>
